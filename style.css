@@ -6,26 +6,54 @@ html {
 *:after {
     box-sizing: inherit;
 }
+* {
+    padding: 0;
+    margin: 0;
+}
 
 body {
     display: flex;
     flex-direction: column;
-    /* min-height: 100vh; */
+    min-height: 100vh;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
+    background-color: #efefef;
+}
+.header {
+    color: #333333;
+    font-size: 60px;
+    padding: 15px 0;
+    margin: 0;
 }
 .buttons {
-    /* outline: black solid 1px; */
     display: flex;
     align-items: center;
     gap: 10px;
 }
+.start {
+    background-color: #4caf50;
+}
+.reset {
+    background-color: #f44336;
+}
+.start,
+.reset {
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: none;
+    color: #ffffff;
+    font-size: large;
+    cursor: pointer;
+}
+.label {
+    font-size: large;
+}
+
 .switch {
     position: relative;
     display: inline-block;
     width: 50px;
     height: 25px;
-    /* margin-top: 5px; */
 }
 
 .switch input[type='checkbox'] {
@@ -80,31 +108,45 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.displayWinner {
+    height: 50px;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    font-style: italic;
+    color: #777777;
+    text-decoration: underline overline;
+    text-underline-offset: 0.2em;
+}
+
 .content {
     display: flex;
-    gap: 200px;
-    align-items: center;
+    gap: 100px;
 }
 
 .scoreBoard {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+}
+
+.player1,
+.player2 {
+    font-size: 30px;
+    padding: 5px 0px;
+    text-align: center;
+    background-color: #d8d8d8;
+    border: black solid 0.1px;
+    border-radius: 15px;
 }
 
 .score1,
 .score2 {
     text-align: center;
     font-size: 50px;
-}
-
-.player1,
-.player2 {
-    /* outline: none; */
-    /* border: none; */
-    font-size: 30px;
-    padding: 0;
-    margin: 0;
-    text-align: center;
+    color: #333333;
 }
 
 .container {
@@ -112,11 +154,34 @@ input:checked + .slider:before {
     flex-wrap: wrap;
     width: 600px;
     height: 600px;
-    outline: black solid 1px;
 }
 
 .box {
     width: 200px;
     height: 200px;
-    outline: green solid 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial Unicode MS', sans-serif;
+    font-size: 80px;
+    color: #222222;
+    background-color: #f0f0f0;
+}
+
+.box1,
+.box2,
+.box4,
+.box5 {
+    border-right: #cccccc solid 4px;
+    border-bottom: #cccccc solid 4px;
+}
+
+.box3,
+.box6 {
+    border-bottom: #cccccc solid 4px;
+}
+
+.box7,
+.box8 {
+    border-right: #cccccc solid 4px;
 }

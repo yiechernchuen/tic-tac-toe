@@ -13,18 +13,18 @@
         <div class="buttons">
             <button class="start">Start</button>
             <button class="reset">Reset</button>
-            <label for="initiator">Player 1 goes first:</label>
+            <label for="initiator" class="label">Player X initiates:</label>
             <label for="initiator" class="switch">
                 <input type="checkbox" id="initiator" />
                 <span class="slider round"></span>
             </label>
         </div>
+        <p class="displayWinner"></p>
         <div class="content">
             <div class="scoreBoard">
-                <input type="text" class="player1" value="Player 1" />
+                <input type="text" class="player1" value="Player X" />
                 <p class="score1">0</p>
             </div>
-            <!-- <p class="player1"></p> -->
             <div class="container">
                 <div class="box box1" data-index="0"></div>
                 <div class="box box2" data-index="1"></div>
@@ -37,12 +37,9 @@
                 <div class="box box9" data-index="8"></div>
             </div>
             <div class="scoreBoard">
-                <input type="text" class="player2" value="Player 2" />
+                <input type="text" class="player2" value="Player O" />
                 <p class="score2">0</p>
             </div>
-            <!-- <p class="player2">Player 2</p> -->
         </div>
-
-        <div class="footer"></div>
     </body>
 </html>
